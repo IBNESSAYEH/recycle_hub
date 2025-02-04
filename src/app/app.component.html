@@ -2,12 +2,12 @@
   @if (!isAuthPage) {
     <app-navbar />
     <div class="flex">
-      <app-sidebar />
-      <main class="flex-1 ml-64 p-6 bg-gray-50">
+      <!-- <app-sidebar /> -->
+      <!-- <main class="flex-1 ml-64 p-6 bg-gray-50"> -->
         <div class="max-w-7xl mx-auto mt-14">
           <router-outlet />
         </div>
-      </main>
+      <!-- </main> -->
     </div>
   } @else {
     <router-outlet />
