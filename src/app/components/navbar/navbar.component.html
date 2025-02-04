@@ -1,0 +1,101 @@
+<nav class="fixed top-0 right-0 left-0 bg-white/90 backdrop-blur-sm border-b z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-8">
+        <a class="flex items-center">
+          <img class="h-10 w-auto" src="images/RecycleHubLogo-removebg-preview.png" alt="RecycleHub Logo">
+        </a>
+
+        <!-- Navigation Links -->
+        @if(authService.getToken()) {
+          <div class="hidden md:flex items-center space-x-4">
+            <a routerLink="/dashboard" routerLinkActive="text-primary"
+               class="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z"/>
+              </svg>
+              Dashboard
+            </a>
+
+            <a routerLink="/users" routerLinkActive="text-primary"
+               class="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+              Users
+            </a>
+
+            <a routerLink="/home" routerLinkActive="text-primary"
+               class="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+              Home
+            </a>
+
+            <a routerLink="/ebanky-news" routerLinkActive="text-primary"
+               class="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+              </svg>
+              News
+            </a>
+          </div>
+        }
+      </div>
+
+      <!-- Mobile Menu Button -->
+      @if(authService.getToken()) {
+        <button class="md:hidden" (click)="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      }
+
+      <!-- User Menu -->
+      @if(authService.getToken()) {
+        <div class="relative group">
+          <button class="flex items-center">
+            <img src="https://ui-avatars.com/api/?name=John+Doe" class="w-10 h-10 rounded-full ring-2 ring-gray-200 transition-all group-hover:ring-primary" alt="Profile">
+          </button>
+          <ul class="hidden group-hover:block absolute right-0 mt-2 bg-white border rounded-xl p-1 w-56 shadow-lg">
+            <li>
+              <a class="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">
+                Profile
+                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded-full">New</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">
+                Settings
+              </a>
+            </li>
+            <li>
+              <button (click)="authService.logout()" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if(showMobileMenu && authService.getToken()) {
+    <div class="md:hidden border-t">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a routerLink="/dashboard" routerLinkActive="text-primary"
+           class="flex items-center px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z"/>
+          </svg>
+          Dashboard
+        </a>
+        <!-- Add other mobile menu items similarly -->
+      </div>
+    </div>
+  }
+</nav>

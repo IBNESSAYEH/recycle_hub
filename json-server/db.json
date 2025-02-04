@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "test@test.com",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "id": "df3e",
+      "email": "zurevib@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "b165",
+      "email": "qarida@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "4ff6",
+      "firstName": "Arthur",
+      "lastName": "Pittman",
+      "email": "cora@mailinator.com",
+      "phone": "+1 (627) 138-9829",
+      "address": "Vero eum veniam qui",
+      "city": "Qui Nam ut non non d",
+      "zipCode": "13473",
+      "birthDate": "1974-02-27",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "6c79",
+      "firstName": "Vance",
+      "lastName": "Shannon",
+      "email": "tosyza@mailinator.com",
+      "phone": "+1 (679) 547-2055",
+      "address": "Voluptate corrupti ",
+      "city": "Consequuntur vitae a",
+      "zipCode": "69661",
+      "birthDate": "1972-02-16",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "1949",
+      "firstName": "Jamal",
+      "lastName": "Dodson",
+      "email": "jofabomi@mailinator.com",
+      "phone": "+1 (539) 108-4238",
+      "address": "Error officia id of",
+      "city": "Placeat ex rerum vo",
+      "zipCode": "15234",
+      "birthDate": "1977-05-13",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "fdc9",
+      "firstName": "September",
+      "lastName": "Maynard",
+      "email": "rikucun@mailinator.com",
+      "phone": "+1 (891) 537-6493",
+      "address": "Omnis recusandae Ut",
+      "city": "Eos amet labore cu",
+      "zipCode": "58591",
+      "birthDate": "1979-06-12",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    }
+  ]
+}
