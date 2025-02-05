@@ -73,6 +73,20 @@
       "password": "Pa$$w0rd!",
       "confirmPassword": "Pa$$w0rd!",
       "role": "USER"
+    },
+    {
+      "id": "8915",
+      "firstName": "Nola",
+      "lastName": "Kelley",
+      "email": "qadacabaze@mailinator.com",
+      "phone": "+1 (312) 836-5282",
+      "address": "Saepe officia quia o",
+      "city": "Excepteur nobis temp",
+      "zipCode": "67725",
+      "birthDate": "1984-11-25",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
     }
   ]
 }

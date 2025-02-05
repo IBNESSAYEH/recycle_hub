@@ -1,39 +1,80 @@
 
 <div class="min-h-screen bg-base-200">
 
-  <header class="relative bg-primary text-white">
-    <div class="absolute inset-0">
-      <img src="images/8.png" class="w-full h-full object-cover opacity-90">
-    </div>
-    <div class="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-        Transform Waste into Value
+<header class="relative h-[90vh] overflow-hidden bg-gradient-to-r from-sky-700 via-sky-500 to-sky-300">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+
+
+
+  <!-- Animated Floating Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-20 left-10 w-32 h-32 bg-sky-400/30 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 bg-green-400/20 rounded-full blur-3xl animate-float-delayed"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+    <div class="text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
+      <!-- Enhanced Main Heading -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight animate-fade-in">
+        Transformez vos <span class="text-green-400 drop-shadow-lg">déchets</span><br/>
+        en <span class="text-green-400 drop-shadow-lg">valeur</span>
       </h1>
-      <p class="mt-6 text-xl max-w-3xl">
-        Join our mission to create a sustainable future through innovative recycling solutions.
+
+      <!-- Styled Subheading -->
+      <p class="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-in-delayed drop-shadow-md">
+        Rejoignez notre mission pour créer un avenir durable grâce à des solutions de recyclage innovantes.
       </p>
-      <div class="mt-10">
-        <a href="#services" class="btn btn-secondary">
-          Discover Our Services
+
+      <!-- Modern CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-delayed-2">
+        <a href="#services"
+           class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl group">
+          <span class="relative z-10 flex items-center">
+            Découvrir nos services
+            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </span>
+        </a>
+        <a href="#about"
+           class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all">
+          En savoir plus
         </a>
       </div>
-    </div>
-  </header>
-  <div class="min-h-screen bg-base-200">
 
-    <header class="relative bg-primary text-white">
-      <!-- <div class="absolute inset-0">
-        <img src="images/32.png" class="w-full h-full object-cover opacity-20"/>
-      </div> -->
-      <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl text-center font-bold tracking-tight sm:text-5xl">
-          Recyclez, Gagnez, Préservez
-        </h1>
-        <div class="mt-4 text-center text-lg ">
-          Connectez-vous avec des collecteurs agréés et transformez vos déchets en récompenses.
+      <!-- Styled Stats -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-delayed-3">
+        <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-transform">
+          <div class="text-3xl font-bold text-green-400">2K+</div>
+          <div class="text-white/80">Utilisateurs</div>
+        </div>
+        <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-transform">
+          <div class="text-3xl font-bold text-green-400">10T</div>
+          <div class="text-white/80">Déchets recyclés</div>
+        </div>
+        <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-transform">
+          <div class="text-3xl font-bold text-green-400">50+</div>
+          <div class="text-white/80">Collecteurs</div>
+        </div>
+        <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 transform hover:scale-105 transition-transform">
+          <div class="text-3xl font-bold text-green-400">24/7</div>
+          <div class="text-white/80">Support</div>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+
+  <!-- Enhanced Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <div class="animate-bounce bg-white/20 backdrop-blur-sm rounded-full p-2">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </div>
+</header>
 
 
     <section class="py-12">
@@ -101,7 +142,7 @@
         </div>
       </div>
     </section>
-  </div>
+
 
 
   <section id="services" class="py-16">
