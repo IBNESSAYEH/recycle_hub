@@ -1,23 +1,20 @@
-
-export enum WasteType {
-  PLASTIC = 'PLASTIC',
-  GLASS = 'GLASS',
-  PAPER = 'PAPER',
-  METAL = 'METAL'
-}
-
-
 export interface CollecteModel {
-  wasteType: WasteType;
+  id?: number;
+  wasteType: 'plastic' | 'glass' | 'paper' | 'metal';
   photos?: string[];
   estimatedWeight: number;
   collectionAddress: string;
-  preferredDate: Date;
-  preferredTimeSlot: string;
+  collectionDate: Date;
+  timeSlot: string;
   additionalNotes?: string;
+  status: 'pending' | 'accepted' | 'completed' | 'cancelled';
+  userId: number;
 }
 
 export interface CollecteState {
   collectes: CollecteModel[];
-};
-
+  selectedCollecte: CollecteModel | null;
+  loading: boolean;
+  error: string | null;
+  showForm: boolean;
+}
