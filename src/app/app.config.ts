@@ -1,14 +1,19 @@
-import { ApplicationConfig, isDevMode } from '@angular/core';
-import { provideRouter, withComponentInputBinding } from '@angular/router';
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
-import { authInterceptor } from './interceptors/auth.interceptor';
+import { provideStore } from '@ngrx/store';
+import { provideEffects } from '@ngrx/effects';
+import { collecteReducer } from './store/collecte/collecte.reducer';
+import { CollecteEffects } from './store/collecte/collecte.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withComponentInputBinding()),
-    provideHttpClient(
-      withInterceptors([authInterceptor])
-    )
+    provideRouter(routes),
+    provideHttpClient(),
+    provideStore({
+      collectes: collecteReducer
+    }),
+    provideEffects([CollecteEffects]) 
   ]
 };
