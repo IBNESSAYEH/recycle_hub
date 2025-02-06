@@ -1,5 +1,13 @@
-import { CollecteState } from "./collecte.model";
+import { CollecteModel } from "./collecte.model";
 
-export const collecteState: CollecteState = {
+export interface CollecteState {
+  collectes: CollecteModel[];
+  loading: boolean;
+  error: string | null;
+}
+
+export const initialState: CollecteState = {
   collectes: [],
+  loading: false,
+  error: null
 };

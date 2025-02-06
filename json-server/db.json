@@ -87,11 +87,25 @@
       "password": "Pa$$w0rd!",
       "confirmPassword": "Pa$$w0rd!",
       "role": "USER"
+    },
+    {
+      "id": "8fa2",
+      "firstName": "Colt",
+      "lastName": "Palmer",
+      "email": "zezyravid@mailinator.com",
+      "phone": "+1 (438) 386-4402",
+      "address": "Sint sed est quo exc",
+      "city": "Ad mollit accusantiu",
+      "zipCode": "32632",
+      "birthDate": "2019-02-19",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
     }
   ],
   "collectes": [
     {
-      "id": 1,
+      "id": "1",
       "wasteType": "PLASTIC",
       "photos": [
         "https://example.com/photo1.jpg",
@@ -104,7 +118,7 @@
       "additionalNotes": "Lots of plastic bottles and containers"
     },
     {
-      "id": 2,
+      "id": "2",
       "wasteType": "GLASS",
       "estimatedWeight": 3000,
       "collectionAddress": "28 Avenue des Champs-Élysées, 75008 Paris",
@@ -113,7 +127,7 @@
       "additionalNotes": "Mainly wine bottles"
     },
     {
-      "id": 3,
+      "id": "3",
       "wasteType": "PAPER",
       "photos": [
         "https://example.com/paper1.jpg"
@@ -124,7 +138,7 @@
       "preferredTimeSlot": "11:00"
     },
     {
-      "id": 4,
+      "id": "4",
       "wasteType": "METAL",
       "estimatedWeight": 4000,
       "collectionAddress": "7 Place de la Bastille, 75004 Paris",
@@ -133,7 +147,7 @@
       "additionalNotes": "Old appliances and cans"
     },
     {
-      "id": 5,
+      "id": "5",
       "wasteType": "PLASTIC",
       "estimatedWeight": 1800,
       "collectionAddress": "123 Boulevard Saint-Germain, 75006 Paris",
@@ -141,7 +155,7 @@
       "preferredTimeSlot": "10:00"
     },
     {
-      "id": 6,
+      "id": "6",
       "wasteType": "GLASS",
       "photos": [
         "https://example.com/glass1.jpg",
@@ -154,7 +168,7 @@
       "additionalNotes": "Fragile items included"
     },
     {
-      "id": 7,
+      "id": "7",
       "wasteType": "PAPER",
       "estimatedWeight": 2000,
       "collectionAddress": "55 Rue Oberkampf, 75011 Paris",
@@ -163,7 +177,7 @@
       "additionalNotes": "Old magazines and newspapers"
     },
     {
-      "id": 8,
+      "id": "8",
       "wasteType": "METAL",
       "photos": [
         "https://example.com/metal1.jpg"
@@ -174,7 +188,7 @@
       "preferredTimeSlot": "12:00"
     },
     {
-      "id": 9,
+      "id": "9",
       "wasteType": "PLASTIC",
       "estimatedWeight": 3500,
       "collectionAddress": "8 Rue des Martyrs, 75009 Paris",
@@ -183,7 +197,7 @@
       "additionalNotes": "Construction materials"
     },
     {
-      "id": 10,
+      "id": "10",
       "wasteType": "GLASS",
       "photos": [
         "https://example.com/glass3.jpg"
@@ -192,8 +206,20 @@
       "collectionAddress": "33 Avenue Montaigne, 75008 Paris",
       "preferredDate": "2025-03-03",
       "preferredTimeSlot": "10:30"
+    },
+    {
+      "id": "9dad",
+      "wasteType": "METAL",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Velit duis sunt corr",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "14:30",
+      "additionalNotes": "",
+      "photos": [
+        {}
+      ],
+      "status": "pending",
+      "userId": 1
     }
   ]
-
-
 }

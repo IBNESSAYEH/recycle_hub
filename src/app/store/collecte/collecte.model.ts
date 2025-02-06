@@ -1,14 +1,14 @@
 export interface CollecteModel {
-  id?: number;
-  wasteType: 'plastic' | 'glass' | 'paper' | 'metal';
-  photos?: string[];
+  id: string;
+  wasteType: 'PLASTIC' | 'GLASS' | 'PAPER' | 'METAL';
+  photos?: any[];
   estimatedWeight: number;
   collectionAddress: string;
-  collectionDate: Date;
-  timeSlot: string;
+  preferredDate: string;
+  preferredTimeSlot: string;
   additionalNotes?: string;
-  status: 'pending' | 'accepted' | 'completed' | 'cancelled';
-  userId: number;
+  status?: 'pending' | 'accepted' | 'completed' | 'cancelled';
+  userId?: number;
 }
 
 export interface CollecteState {
