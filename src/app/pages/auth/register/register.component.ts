@@ -1,4 +1,4 @@
-// register.component.ts
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +40,6 @@ export class RegisterComponent {
     this.errorMessage = '';
     this.successMessage = '';
 
-    // Basic validations
     if (formData.password !== formData.confirmPassword) {
       this.errorMessage = 'Les mots de passe ne correspondent pas';
       this.loading = false;

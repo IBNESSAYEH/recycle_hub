@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { CollecteFormComponent } from './components/collecte-form/collecte-form.component';
 import { CollectListComponent } from './components/collect-list/collect-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditIconComponent } from './components/icons/edit-icon/edit-icon.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 export const routes: Routes = [
   {
@@ -41,6 +43,11 @@ export const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [() => inject(AuthGuard).canActivate()]
+  },
+  {
+    path: 'edit-profile',
+    component: EditProfileComponent,
     canActivate: [() => inject(AuthGuard).canActivate()]
   },
   {
