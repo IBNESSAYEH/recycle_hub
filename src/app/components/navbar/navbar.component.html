@@ -1,13 +1,12 @@
 <nav class="fixed top-0 right-0 left-0 bg-white/90 backdrop-blur-sm border-b z-50 shadow-sm">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex h-16 items-center justify-between">
-      <!-- Logo -->
+
       <div class="flex items-center gap-8">
         <a class="flex items-center">
           <img class="h-10 w-auto" src="assets/images/RecycleHubLogo-removebg-preview.png" alt="RecycleHub Logo">
         </a>
 
-        <!-- Navigation Links -->
         @if(authService.getToken()) {
           <div class="hidden md:flex items-center space-x-4">
             <a routerLink="/dashboard" routerLinkActive="text-primary"
@@ -45,7 +44,6 @@
         }
       </div>
 
-      <!-- Mobile Menu Button -->
       @if(authService.getToken()) {
         <button class="md:hidden" (click)="toggleMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +52,6 @@
         </button>
       }
 
-      <!-- User Menu -->
       @if(authService.getToken()) {
         <div class="relative group">
           <button class="flex items-center">
@@ -83,7 +80,7 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
+
   @if(showMobileMenu && authService.getToken()) {
     <div class="md:hidden border-t">
       <div class="px-2 pt-2 pb-3 space-y-1">
@@ -94,7 +91,7 @@
           </svg>
           Dashboard
         </a>
-        <!-- Add other mobile menu items similarly -->
+
       </div>
     </div>
   }

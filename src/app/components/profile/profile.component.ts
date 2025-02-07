@@ -57,8 +57,8 @@ export class ProfileComponent implements OnInit {
       text: "You won't be able to revert this!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#10B981', // Emerald-600
-      cancelButtonColor: '#EF4444',  // Red-500
+      confirmButtonColor: '#10B981',
+      cancelButtonColor: '#EF4444', 
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'Cancel'
     });
