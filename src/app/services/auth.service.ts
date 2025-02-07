@@ -27,7 +27,7 @@ export class AuthService {
     private router: Router
   ) { }
 
-  // Correction de la méthode getToken
+
   getToken(): string | null {
     const user = this.getCurrentUser();
     if (user && user.id) {

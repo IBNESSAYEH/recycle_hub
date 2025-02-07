@@ -8,6 +8,7 @@ import { inject } from '@angular/core';
 import { HomeComponent } from './pages/home/home.component';
 import { CollecteFormComponent } from './components/collecte-form/collecte-form.component';
 import { CollectListComponent } from './components/collect-list/collect-list.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
   {
@@ -35,6 +36,11 @@ export const routes: Routes = [
   {
     path: 'collecte-list',
     component: CollectListComponent,
+    canActivate: [() => inject(AuthGuard).canActivate()]
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
     canActivate: [() => inject(AuthGuard).canActivate()]
   },
   {

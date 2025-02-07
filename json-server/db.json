@@ -101,6 +101,20 @@
       "password": "Pa$$w0rd!",
       "confirmPassword": "Pa$$w0rd!",
       "role": "USER"
+    },
+    {
+      "id": "8686",
+      "firstName": "Sonia",
+      "lastName": "Griffin",
+      "email": "bamyvyfowe@mailinator.com",
+      "phone": "+1 (316) 177-9604",
+      "address": "Velit numquam quisqu",
+      "city": "Ullam et illo conseq",
+      "zipCode": "16068",
+      "birthDate": "1991-01-30",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
     }
   ],
   "collectes": [
@@ -218,6 +232,72 @@
       "photos": [
         {}
       ],
+      "status": "completed",
+      "userId": 1
+    },
+    {
+      "id": "ce18a",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "pending",
+      "userId": 1
+    },
+    {
+      "id": "ce18b",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "ce18v",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "cancelled",
+      "userId": 1
+    },
+    {
+      "id": "ce18f",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "2c8f",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Quaerat cillum inven",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "14:30",
+      "additionalNotes": "Adipisci veniam nos",
+      "status": "pending",
+      "userId": 1
+    },
+    {
+      "id": "b556",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Reprehenderit offici",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "12:30",
+      "additionalNotes": "Est ut et do praesen",
       "status": "pending",
       "userId": 1
     }
