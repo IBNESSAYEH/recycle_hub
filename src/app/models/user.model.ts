@@ -20,13 +20,17 @@ export interface AuthUser{
 }
 
 export interface UserData {
-  id: number;
+  id: string;
   firstName: string;
   lastName: string;
   email: string;
-  age: number;
-  monthlyIncome: number | null;
-  creditScore: number;
-  totalSolde: number | null;
-  role: 'ADMIN' | 'USER';
+  phone: string;
+  address: string;
+  city: string;
+  zipCode: string;
+  birthDate: string;
+  password: string;
+  confirmPassword: string;
+  role: 'USER' | 'PARTICULIER';
 }
+

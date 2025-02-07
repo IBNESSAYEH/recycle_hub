@@ -48,11 +48,11 @@
         </div>
       } @else {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          @for (collect of collects; track collect.id) {
+          @for (collect of collects; track collect.id; let i = $index) {
             <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <!-- Card Image -->
               <figure class="px-4 pt-4">
-                <img [src]="wasteTypeImages[+collect.id]"
+                <img [src]="wasteTypeImages[i]"
                      [alt]="collect.wasteType"
                      class="rounded-xl h-48 w-full object-cover">
               </figure>

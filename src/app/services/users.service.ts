@@ -8,16 +8,19 @@ import { User, UserData } from '../models/user.model';
 })
 export class UsersService {
 
-    apiUrl: string = 'http://localhost:8080/api/users';
+  apiUrl: string = 'http://localhost:3000/users';
+  http = inject(HttpClient);
 
-    http = inject(HttpClient);
-
-    getAllUsers(): Observable<UserData[]>{
-      return this.http.get<UserData[]>(this.apiUrl);
-    }
-
-    deleteAccount(id: string): Observable<UserData[]>{
-      return this.http.delete<UserData[]>(`${this.apiUrl}/${id}`);
-    }
+  getCurrentUserFromStorage(): UserData | null {
+    const userStr = localStorage.getItem('currentUser');
+    return userStr ? JSON.parse(userStr) : null;
+  }
+  getCurrentUserSync(): UserData | null {
+    const userStr = localStorage.getItem('currentUser');
+    return userStr ? JSON.parse(userStr) : null;
+  }
+  deleteAccount(id: string): Observable<UserData[]> {
+    return this.http.delete<UserData[]>(`${this.apiUrl}/${id}`);
+  }
 
 }

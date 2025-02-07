@@ -43,6 +43,6 @@ export class CollectListComponent implements OnInit {
 
   onEdit(collect: CollecteModel) {
     console.log('Edit collect:', collect);
-    // TODO: Implement edit functionality
+   
   }
 }
