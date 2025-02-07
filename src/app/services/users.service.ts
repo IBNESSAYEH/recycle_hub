@@ -11,6 +11,10 @@ export class UsersService {
   apiUrl: string = 'http://localhost:3000/users';
   http = inject(HttpClient);
 
+
+  createUser(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, userData);
+  }
   getCurrentUserFromStorage(): UserData | null {
     const userStr = localStorage.getItem('currentUser');
     return userStr ? JSON.parse(userStr) : null;

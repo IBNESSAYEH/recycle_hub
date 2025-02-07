@@ -48,7 +48,7 @@ export class RegisterComponent {
 
     const newUser = {
       ...formData,
-      role: 'USER'
+      role: 'PARTICULIER'
     };
 
     this.authService.register(newUser).subscribe({
