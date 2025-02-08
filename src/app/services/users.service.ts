@@ -12,6 +12,7 @@ export class UsersService {
   http = inject(HttpClient);
 
 
+
   createUser(userData: any): Observable<any> {
     return this.http.post(`${this.apiUrl}`, userData);
   }

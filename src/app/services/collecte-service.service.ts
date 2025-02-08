@@ -23,7 +23,11 @@ export class CollecteService {
     return this.http.put<CollecteModel>(`${this.apiUrl}/${collecte.id}`, collecte);
   }
 
-  deleteCollecte(id: number): Observable<void> {
+  deleteCollecte(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  updateCollectStatus(id: string, status: 'pending' | 'accepted' | 'completed' | 'cancelled'): Observable<CollecteModel> {
+    return this.http.patch<CollecteModel>(`${this.apiUrl}/${id}`, { status });
   }
 }

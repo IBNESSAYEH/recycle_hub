@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { addCollect } from '../../store/collecte/collecte.actions';
 import { CollecteModel } from '../../store/collecte/collecte.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-collecte-form',
@@ -16,6 +17,9 @@ export class CollecteFormComponent implements OnInit {
   collecteForm!: FormGroup;
   minDate: string;
   selectedFiles: File[] = [];
+  authUrer = inject(AuthService);
+
+  currentUser = this.authUrer.getCurrentUser();
 
   readonly wasteTypes = ['PLASTIC', 'GLASS', 'PAPER', 'METAL'] as const;
   readonly timeSlots = Array.from({ length: 19 }, (_, i) => {
@@ -118,7 +122,7 @@ export class CollecteFormComponent implements OnInit {
       const collecte: CollecteModel = {
         ...formValue,
         status: 'pending',
-        userId: 1, // TODO: Get from AuthService
+        userId: this.currentUser?.id ? this.currentUser?.id : 1,
         photos: this.selectedFiles.length ? this.selectedFiles : undefined,
         estimatedWeight: Number(formValue.estimatedWeight)
       };

@@ -6,6 +6,11 @@ import { inject } from '@angular/core';
 import { deleteCollect, loadCollects } from '../../store/collecte/collecte.actions';
 import { selectAllCollects, selectCollecteLoading, selectCollecteError } from '../../store/collecte/collecte.selectors';
 import { CollecteModel } from '../../store/collecte/collecte.model';
+import { UsersService } from '../../services/users.service';
+import { AuthService } from '../../services/auth.service';
+import Swal from 'sweetalert2';
+import { CollecteService } from '../../services/collecte-service.service';
+import {updateCollectStatus} from '../../store/collecte/collecte.actions';
 
 @Component({
   selector: 'app-collect-list',
@@ -16,6 +21,12 @@ import { CollecteModel } from '../../store/collecte/collecte.model';
 })
 export class CollectListComponent implements OnInit {
   private store = inject(Store);
+  authUrer = inject(AuthService);
+
+  currentUser = this.authUrer.getCurrentUser();
+  collecteService = inject(CollecteService)
+
+
   wasteTypeImages = ['assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png','assets/images/5.png','assets/images/6.png','assets/images/7.png','assets/images/8.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png','assets/images/5.png','assets/images/6.png','assets/images/7.png','assets/images/8.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png','assets/images/5.png','assets/images/6.png','assets/images/7.png','assets/images/8.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png','assets/images/5.png','assets/images/6.png','assets/images/7.png','assets/images/8.png','assets/images/1.png','assets/images/2.png','assets/images/3.png','assets/images/4.png','assets/images/5.png','assets/images/6.png','assets/images/7.png','assets/images/8.png'];
 
   collects$: Observable<CollecteModel[]> = this.store.select(selectAllCollects).pipe(
@@ -35,14 +46,55 @@ export class CollectListComponent implements OnInit {
     this.store.dispatch(loadCollects());
   }
 
-  onDelete(id: number) {
-    if (confirm('Are you sure you want to delete this collection request?')) {
-      this.store.dispatch(deleteCollect({ id }));
-    }
+
+
+
+
+
+
+
+
+
+  onStatusChange(
+    collectId: string,
+    event: Event,
+    currentStatus: 'pending' | 'accepted' | 'completed' | 'cancelled' | undefined
+  ) {
+    const select = event.target as HTMLSelectElement;
+    const newStatus = select.value as 'pending' | 'accepted' | 'completed' | 'cancelled';
+
+    if (!currentStatus) return;
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: `Change status to ${newStatus}?`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#10B981',
+      cancelButtonColor: '#EF4444',
+      confirmButtonText: 'Yes, change it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.store.dispatch(updateCollectStatus({ id: collectId, status: newStatus }));
+      } else {
+        select.value = currentStatus;
+      }
+    });
   }
 
-  onEdit(collect: CollecteModel) {
-    console.log('Edit collect:', collect);
-   
+  onDelete(id: string) {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#10B981',
+      cancelButtonColor: '#EF4444',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.store.dispatch(deleteCollect({ id }));
+      }
+    });
   }
 }
