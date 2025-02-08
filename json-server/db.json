@@ -143,20 +143,6 @@
       "password": "Pa$$w0rd!",
       "confirmPassword": "Pa$$w0rd!",
       "role": "USER"
-    },
-    {
-      "id": "ce98",
-      "firstName": "Patricia",
-      "lastName": "Conley",
-      "email": "xepy@mailinator.com",
-      "phone": "+1 (341) 931-2282",
-      "address": "Quod sed aut et volu",
-      "city": "Accusantium ipsa ab",
-      "zipCode": "44842",
-      "birthDate": "2011-02-19",
-      "password": "Pa$$w0rd!",
-      "confirmPassword": "Pa$$w0rd!",
-      "role": "PARTICULIER"
     }
   ],
   "collectes": [
@@ -329,7 +315,7 @@
       "preferredDate": "2025-02-06",
       "preferredTimeSlot": "14:30",
       "additionalNotes": "Adipisci veniam nos",
-      "status": "pending",
+      "status": "cancelled",
       "userId": 1
     },
     {
@@ -340,6 +326,17 @@
       "preferredDate": "2025-02-06",
       "preferredTimeSlot": "12:30",
       "additionalNotes": "Est ut et do praesen",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "e737",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 10000,
+      "collectionAddress": "Aliqua Esse ration",
+      "preferredDate": "2025-02-08",
+      "preferredTimeSlot": "11:00",
+      "additionalNotes": "Cum at aut voluptas ",
       "status": "pending",
       "userId": 1
     }

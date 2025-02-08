@@ -58,7 +58,17 @@ export class CollecteEffects {
     )
   );
 
-  
+  updateStatus$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(CollecteActions.updateCollectStatus),
+      mergeMap(({ id, status }) =>
+        this.collecteService.updateCollectStatus(id, status).pipe(
+          map(collecte => CollecteActions.updateCollectStatusSuccess({ collecte })),
+          catchError(error => of(CollecteActions.updateCollectStatusFailure({ error: error.message })))
+        )
+      )
+    )
+  );
 
   constructor(
     // private readonly actions$: Actions,
