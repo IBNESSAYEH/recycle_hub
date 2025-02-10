@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { CollecteState } from './collecte.model';
 
-// Update this to match your state name in app.config.ts
+
 export const selectCollecteState = createFeatureSelector<CollecteState>('collectes');
 
 export const selectAllCollects = createSelector(

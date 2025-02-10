@@ -107,10 +107,10 @@
                 @if (collect.status === 'pending') {
                   <div class="card-actions justify-end mt-4 pt-4 border-t border-gray-100">
                     @if(collect.userId === currentUser?.id){
-                    <button 
-                            class="btn btn-primary btn-sm">
-                      Modifier
-                    </button>
+                      <button [routerLink]="'/collecte/edit/' + collect.id"
+                      class="btn btn-primary btn-sm">
+                Modifier
+              </button>
                     @if(collect.id){
                       <button (click)="onDelete(collect.id)"
                               class="btn btn-error btn-sm">

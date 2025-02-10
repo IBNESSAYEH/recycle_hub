@@ -142,7 +142,8 @@
       "birthDate": "2015-06-06",
       "password": "Pa$$w0rd!",
       "confirmPassword": "Pa$$w0rd!",
-      "role": "USER"
+      "role": "USER",
+      "point": 52012
     }
   ],
   "collectes": [
@@ -337,8 +338,30 @@
       "preferredDate": "2025-02-08",
       "preferredTimeSlot": "11:00",
       "additionalNotes": "Cum at aut voluptas ",
-      "status": "pending",
+      "status": "accepted",
       "userId": 1
+    },
+    {
+      "id": "b360",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 1006,
+      "collectionAddress": "Omnis nulla in et fu",
+      "preferredDate": "2025-02-08",
+      "preferredTimeSlot": "18:00",
+      "additionalNotes": "Fugiat mollit ipsam ",
+      "status": "completed",
+      "userId": "0678"
+    },
+    {
+      "id": "a3ae",
+      "wasteType": "METAL",
+      "estimatedWeight": 10000,
+      "collectionAddress": "Et suscipit explicab",
+      "preferredDate": "2025-02-09",
+      "preferredTimeSlot": "15:00",
+      "additionalNotes": "Dolores rerum ipsum",
+      "status": "completed",
+      "userId": "0678"
     }
   ]
 }

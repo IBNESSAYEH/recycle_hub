@@ -18,17 +18,6 @@ export const deleteCollectSuccess = createAction('[Collects] Delete a Collect Su
 export const deleteCollectFailure = createAction('[Collects] Delete a Collect Failure', props<{ error: string }>());
 
 
-export const updateCollectStatus = createAction(
-  '[Collects] Update Collect Status',
-  props<{ id: string; status: 'pending' | 'accepted' | 'completed' | 'cancelled' }>()
-);
-
-export const updateCollectStatusSuccess = createAction(
-  '[Collects] Update Collect Status Success',
-  props<{ collecte: CollecteModel }>()
-);
-
-export const updateCollectStatusFailure = createAction(
-  '[Collects] Update Collect Status Failure',
-  props<{ error: string }>()
-);
+export const updateCollectStatus = createAction('[Collects] Update Collect Status',props<{ id: string; status: 'pending' | 'accepted' | 'completed' | 'cancelled' }>());
+export const updateCollectStatusSuccess = createAction('[Collects] Update Collect Status Success',props<{ collecte: CollecteModel }>());
+export const updateCollectStatusFailure = createAction('[Collects] Update Collect Status Failure',props<{ error: string }>());

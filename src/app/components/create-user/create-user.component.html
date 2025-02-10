@@ -1,7 +1,7 @@
 <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-4xl mx-auto">
     <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-      <!-- Header -->
+   
       <div class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 px-8 py-10 relative overflow-hidden">
         <div class="absolute inset-0">
           <div class="absolute top-0 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-2xl transform -translate-y-1/2 animate-pulse"></div>
@@ -13,9 +13,8 @@
         </div>
       </div>
 
-      <!-- Form -->
       <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="p-8 space-y-6">
-        <!-- Personal Information -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-2">
             <label class="block text-sm font-semibold text-gray-700">
@@ -42,7 +41,6 @@
           </div>
         </div>
 
-        <!-- Contact Information -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-2">
             <label class="block text-sm font-semibold text-gray-700">
@@ -73,7 +71,6 @@
           </div>
         </div>
 
-        <!-- Address -->
         <div class="space-y-2">
           <label class="block text-sm font-semibold text-gray-700">
             Address <span class="text-red-500">*</span>
@@ -112,7 +109,6 @@
           </div>
         </div>
 
-        <!-- Birth Date -->
         <div class="space-y-2">
           <label class="block text-sm font-semibold text-gray-700">
             Birth Date <span class="text-red-500">*</span>
@@ -125,7 +121,6 @@
           }
         </div>
 
-        <!-- Password -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-2">
             <label class="block text-sm font-semibold text-gray-700">
@@ -154,7 +149,7 @@
           </div>
         </div>
 
-        <!-- Submit Button -->
+
         <div class="pt-6">
           <button type="submit"
                   [disabled]="createForm.invalid"
@@ -163,7 +158,6 @@
           </button>
         </div>
 
-        <!-- Login Link -->
         <div class="text-center text-sm text-gray-600">
           Already have an account?
           <a routerLink="/login" class="font-medium text-emerald-600 hover:text-emerald-500">

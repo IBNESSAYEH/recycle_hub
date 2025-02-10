@@ -30,6 +30,7 @@ export interface UserData {
   zipCode: string;
   birthDate: string;
   password: string;
+  point?: number;
   confirmPassword: string;
   role: 'USER' | 'PARTICULIER';
 }

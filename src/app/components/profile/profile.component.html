@@ -1,8 +1,6 @@
 <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
-
   <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
-
       <div class="mb-8">
         <nav class="flex" aria-label="Breadcrumb">
           <ol class="flex items-center space-x-4">
@@ -19,38 +17,73 @@
         </nav>
       </div>
 
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        <div class="lg:col-span-1 space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-4 space-y-6">
           <div class="bg-white rounded-xl shadow-sm p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Collection Stats</h3>
-            <div class="space-y-4">
-              <div class="flex justify-between items-center">
-                <span class="text-gray-600">Total Collections</span>
-                <span class="font-semibold text-emerald-600">24</span>
+            <h3 class="text-lg font-semibold text-gray-900 mb-6">Points & Vouchers</h3>
+            @if(currentUser && currentUser.point){
+              <div class="space-y-6">
+                <div class="flex justify-between items-center border-b pb-4">
+                  <div>
+                    <p class="text-sm text-gray-600">Total Points</p>
+                    <p class="text-2xl font-bold text-emerald-600">{{currentUser.point}}</p>
+                  </div>
+                  <div class="h-12 w-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-emerald-600">stars</span>
+                  </div>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="bg-gradient-to-r from-emerald-50 to-white p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <p class="text-emerald-600 font-semibold">50 DH</p>
+                        <p class="text-sm text-gray-600">100 points</p>
+                      </div>
+                      <div class="text-lg font-bold text-emerald-600">
+                        {{Math.floor(currentUser.point / 100)}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-blue-50 to-white p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <p class="text-blue-600 font-semibold">120 DH</p>
+                        <p class="text-sm text-gray-600">200 points</p>
+                      </div>
+                      <div class="text-lg font-bold text-blue-600">
+                        {{Math.floor(currentUser.point / 200)}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-purple-50 to-white p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <p class="text-purple-600 font-semibold">350 DH</p>
+                        <p class="text-sm text-gray-600">500 points</p>
+                      </div>
+                      <div class="text-lg font-bold text-purple-600">
+                        {{Math.floor(currentUser.point / 500)}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-600">Points Earned</span>
-                <span class="font-semibold text-emerald-600">1,250</span>
+            } @else {
+              <div class="text-center py-4 text-gray-600">
+                No points available yet
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-600">Next Reward</span>
-                <span class="font-semibold text-emerald-600">250 pts</span>
-              </div>
-            </div>
+            }
           </div>
 
           <div class="bg-white rounded-xl shadow-sm p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
             <div class="space-y-4">
-              <div class="flex items-center">
-                <div class="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  </svg>
-                </div>
-                <div class="ml-3">
+              <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                <span class="material-symbols-outlined text-emerald-600 mr-3">recycling</span>
+                <div>
                   <p class="text-sm font-medium text-gray-900">Collection Completed</p>
                   <p class="text-xs text-gray-500">2 days ago</p>
                 </div>
@@ -59,22 +92,21 @@
           </div>
         </div>
 
-        <div class="lg:col-span-2">
+        <div class="lg:col-span-8">
           <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-
             <div class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 h-48 relative">
               <div class="absolute inset-0">
-                <div class="absolute top-0 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-2xl transform -translate-y-1/2 animate-pulse"></div>
-                <div class="absolute bottom-0 right-1/4 w-20 h-20 bg-white/10 rounded-full blur-2xl transform translate-y-1/2 animate-pulse"></div>
+                <div class="absolute top-0 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-0 right-1/4 w-20 h-20 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
               </div>
             </div>
 
-            <div class="relative px-8 -mt-24 pb-8">
-
-              <div class="relative w-40 h-40 mx-auto mb-4">
-                <img src="assets/images/173375a5976235.png" alt="Profile Picture"
+            <div class="relative px-4 sm:px-8 -mt-24 pb-8">
+              <div class="relative w-32 sm:w-40 h-32 sm:h-40 mx-auto mb-4">
+                <img src="assets/images/173375a5976235.png" alt="Profile"
                      class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
-                <a routerLink="/edit-profile" routerLinkActive="router-link-active"  class="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center cursor-pointer hover:bg-emerald-600 transition-colors">
+                <a routerLink="/edit-profile"
+                   class="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center hover:bg-emerald-600 transition-colors">
                   <span class="material-symbols-outlined text-sm">edit</span>
                 </a>
               </div>
@@ -84,17 +116,12 @@
                   {{currentUser?.firstName}} {{currentUser?.lastName}}
                 </h1>
                 <p class="text-gray-500">{{currentUser?.email}}</p>
-                <div class="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
-                     [ngClass]="{
-                       'bg-emerald-100 text-emerald-800': currentUser?.role === 'USER',
-                       'bg-blue-100 text-blue-800': currentUser?.role === 'PARTICULIER'
-                     }">
+                <div class="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-800">
                   {{currentUser?.role}}
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
                 <div class="space-y-4">
                   <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
                     <label class="text-sm font-medium text-gray-500">Phone</label>
@@ -102,10 +129,9 @@
                   </div>
                   <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
                     <label class="text-sm font-medium text-gray-500">Birth Date</label>
-                    <p class="mt-1 font-medium text-gray-900">{{currentUser?.birthDate}}</p>
+                    <p class="mt-1 font-medium text-gray-900">{{currentUser?.birthDate | date}}</p>
                   </div>
                 </div>
-
 
                 <div class="space-y-4">
                   <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
@@ -120,14 +146,12 @@
                 </div>
               </div>
 
-              <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <button (click)="onEdit()"
-                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors shadow-sm hover:shadow-md">
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button (click)="onEdit()" class="btn-primary">
                   <span class="material-symbols-outlined mr-2">edit</span>
                   Edit Profile
                 </button>
-                <button (click)="onDelete()"
-                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-red-600 bg-red-50 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors">
+                <button (click)="onDelete()" class="btn-danger">
                   <span class="material-symbols-outlined mr-2">delete</span>
                   Delete Account
                 </button>
@@ -141,9 +165,9 @@
 
   <footer class="bg-white border-t border-gray-200 mt-12">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <div class="text-center text-gray-500 text-sm">
+      <p class="text-center text-gray-500 text-sm">
         2024 RecycleHub. All rights reserved.
-      </div>
+      </p>
     </div>
   </footer>
 </div>

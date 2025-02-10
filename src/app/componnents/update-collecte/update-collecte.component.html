@@ -1,0 +1,118 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+      <div class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 px-8 py-10 relative overflow-hidden">
+        <div class="absolute inset-0">
+          <div class="absolute top-0 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-2xl transform -translate-y-1/2 animate-pulse"></div>
+          <div class="absolute bottom-0 right-1/4 w-20 h-20 bg-white/10 rounded-full blur-2xl transform translate-y-1/2 animate-pulse"></div>
+        </div>
+        <div class="relative">
+          <h1 class="text-3xl font-bold text-white">Update Collection Request</h1>
+          <p class="mt-3 text-emerald-100">Modify your collection request details</p>
+        </div>
+      </div>
+
+      @if(loading) {
+        <div class="flex justify-center items-center h-64">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+        </div>
+      } @else {
+        <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="p-8 space-y-6">
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              Waste Type <span class="text-red-500">*</span>
+            </label>
+            <select formControlName="wasteType"
+                    class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors">
+              <option value="">Select a type</option>
+              @for (type of wasteTypes; track type) {
+                <option [value]="type">{{type}}</option>
+              }
+            </select>
+            @if (updateForm.get('wasteType')?.invalid && updateForm.get('wasteType')?.touched) {
+              <p class="text-red-500 text-xs mt-1">Waste type is required</p>
+            }
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              Estimated Weight <span class="text-red-500">*</span>
+              <span class="text-gray-500 text-xs">(1000g - 10000g)</span>
+            </label>
+            <input type="number"
+                   formControlName="estimatedWeight"
+                   class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors">
+            @if (updateForm.get('estimatedWeight')?.invalid && updateForm.get('estimatedWeight')?.touched) {
+              <p class="text-red-500 text-xs mt-1">Weight must be between 1000g and 10000g</p>
+            }
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              Collection Address <span class="text-red-500">*</span>
+            </label>
+            <input type="text"
+                   formControlName="collectionAddress"
+                   class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors">
+            @if (updateForm.get('collectionAddress')?.invalid && updateForm.get('collectionAddress')?.touched) {
+              <p class="text-red-500 text-xs mt-1">Collection address is required</p>
+            }
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="block text-sm font-semibold text-gray-700">
+                Preferred Date <span class="text-red-500">*</span>
+              </label>
+              <input type="date"
+                     formControlName="preferredDate"
+                     class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors">
+              @if (updateForm.get('preferredDate')?.invalid && updateForm.get('preferredDate')?.touched) {
+                <p class="text-red-500 text-xs mt-1">Date is required</p>
+              }
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-sm font-semibold text-gray-700">
+                Preferred Time <span class="text-red-500">*</span>
+              </label>
+              <select formControlName="preferredTimeSlot"
+                      class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors">
+                <option value="">Select time slot</option>
+                @for (slot of timeSlots; track slot) {
+                  <option [value]="slot">{{slot}}</option>
+                }
+              </select>
+              @if (updateForm.get('preferredTimeSlot')?.invalid && updateForm.get('preferredTimeSlot')?.touched) {
+                <p class="text-red-500 text-xs mt-1">Time slot is required</p>
+              }
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold text-gray-700">
+              Additional Notes
+              <span class="text-gray-500 text-xs">(optional)</span>
+            </label>
+            <textarea formControlName="additionalNotes"
+                      rows="3"
+                      class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors"></textarea>
+          </div>
+
+          <div class="flex justify-end space-x-4 pt-6">
+            <button type="button"
+                    (click)="onCancel()"
+                    class="px-6 py-2 border border-gray-300 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors">
+              Cancel
+            </button>
+            <button type="submit"
+                    [disabled]="updateForm.invalid"
+                    class="px-6 py-2 border border-transparent rounded-lg text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
+              Update Request
+            </button>
+          </div>
+        </form>
+      }
+    </div>
+  </div>
+</div>
