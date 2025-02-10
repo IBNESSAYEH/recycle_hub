@@ -52,7 +52,6 @@ export class CreateUserComponent {
           ...this.createForm.value,
           role: 'USER'
         };
-        // Assuming your service has a createUser method
         await this.userService.createUser(userData).toPromise();
 
         await Swal.fire({
@@ -83,7 +82,6 @@ export class CreateUserComponent {
     }
   }
 
-  // Helper method to mark all form controls as touched
   private markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach(control => {
       control.markAsTouched();
@@ -93,7 +91,6 @@ export class CreateUserComponent {
     });
   }
 
-  // Getter methods for template
   get passwordMatchError() {
     return (
       this.createForm.getError('mismatch') &&

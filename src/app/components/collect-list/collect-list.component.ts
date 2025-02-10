@@ -11,11 +11,12 @@ import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
 import { CollecteService } from '../../services/collecte-service.service';
 import {updateCollectStatus} from '../../store/collecte/collecte.actions';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-collect-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './collect-list.component.html',
   styleUrl: './collect-list.component.css'
 })

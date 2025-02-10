@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnInit {
+  Math = Math;
   currentUser: UserData | null = null;
   loading = false;
   error: string | null = null;
@@ -58,7 +59,7 @@ export class ProfileComponent implements OnInit {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#10B981',
-      cancelButtonColor: '#EF4444', 
+      cancelButtonColor: '#EF4444',
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'Cancel'
     });

@@ -12,6 +12,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { EditIconComponent } from './components/icons/edit-icon/edit-icon.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { UpdateCollecteComponent } from './componnents/update-collecte/update-collecte.component';
 
 export const routes: Routes = [
   {
@@ -50,6 +51,10 @@ export const routes: Routes = [
     path: 'edit-profile',
     component: EditProfileComponent,
     canActivate: [() => inject(AuthGuard).canActivate()]
+  },
+  {
+    path: 'collecte/edit/:id',
+    component: UpdateCollecteComponent
   },
   {
     path: 'create-user',
