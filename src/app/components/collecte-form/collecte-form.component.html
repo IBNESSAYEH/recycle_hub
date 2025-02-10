@@ -1,0 +1,174 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Form Container with Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <!-- Left Side - Image and Stats -->
+      <div class="lg:sticky lg:top-8 hidden lg:block bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="aspect-square overflow-hidden rounded-lg mb-8 group">
+          <img
+            src="assets/images/2.png"
+            alt="Recycling"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+        </div>
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent hover:from-emerald-500 hover:to-emerald-700 transition-all duration-300">
+            Make a Difference Today
+          </h2>
+          <p class="text-gray-600 max-w-md mx-auto leading-relaxed">
+            Join our mission to create a cleaner, more sustainable future. Every collection request contributes to a better environment.
+          </p>
+          <!-- Animated Stats Cards -->
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div class="text-3xl font-bold text-emerald-600 animate-pulse">1000+</div>
+              <div class="text-sm text-gray-600 mt-2">Collections Made</div>
+            </div>
+            <div class="bg-gradient-to-br from-white to-teal-50 p-6 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div class="text-3xl font-bold text-teal-600 animate-pulse">5 Tons</div>
+              <div class="text-sm text-gray-600 mt-2">Waste Recycled</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Form -->
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+        <!-- Form Header -->
+        <div class="bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-800 px-8 py-10 relative overflow-hidden">
+          <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-2xl transform -translate-y-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-20 h-20 bg-white/10 rounded-full blur-2xl transform translate-y-1/2 animate-pulse"></div>
+          </div>
+          <div class="relative">
+            <h1 class="text-3xl font-bold text-white">Request Collection</h1>
+            <p class="mt-3 text-emerald-100">Fill in the details below to schedule your collection</p>
+          </div>
+        </div>
+
+        <!-- Form Content -->
+        <form [formGroup]="collecteForm" (ngSubmit)="onSubmit()" class="p-8 space-y-6">
+          <!-- Waste Type -->
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold">
+              Waste Type <span class="text-red-500">*</span>
+            </label>
+            <select formControlName="wasteType"
+                    class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200">
+              <option value="">Select a type</option>
+              @for (type of wasteTypes; track type) {
+                <option [value]="type">{{type | titlecase}}</option>
+              }
+            </select>
+          </div>
+
+          <!-- Estimated Weight -->
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold">
+              Estimated Weight <span class="text-red-500">*</span>
+              <span class="text-gray-500 text-xs font-normal ml-2">(1000g - 10000g)</span>
+            </label>
+            <input type="number"
+                   formControlName="estimatedWeight"
+                   class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200"
+                   placeholder="Enter weight in grams">
+          </div>
+
+          <!-- Collection Address -->
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold">
+              Collection Address <span class="text-red-500">*</span>
+            </label>
+            <input type="text"
+                   formControlName="collectionAddress"
+                   class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200"
+                   placeholder="Enter collection address">
+          </div>
+
+          <!-- Date and Time Selection -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-2">
+              <label class="block text-sm font-semibold">
+                Preferred Date <span class="text-red-500">*</span>
+              </label>
+              <input type="date"
+                     formControlName="preferredDate"
+                     [min]="minDate"
+                     class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200">
+            </div>
+
+            <div class="space-y-2">
+              <label class="block text-sm font-semibold">
+                Preferred Time <span class="text-red-500">*</span>
+              </label>
+              <select formControlName="preferredTimeSlot"
+                      class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200">
+                <option value="">Select time</option>
+                @for (slot of timeSlots; track slot) {
+                  <option [value]="slot">{{slot}}</option>
+                }
+              </select>
+            </div>
+          </div>
+
+          <!-- Photo Upload -->
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold">
+              Photos <span class="text-gray-500 text-xs font-normal">(optional)</span>
+            </label>
+            <div class="mt-1 flex justify-center px-6 py-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-emerald-500 transition-colors duration-200 group cursor-pointer">
+              <div class="space-y-2 text-center">
+                <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-emerald-500 transition-colors duration-200">
+                  upload_file
+                </span>
+                <div class="flex text-sm">
+                  <label class="relative cursor-pointer bg-white rounded-md font-medium text-emerald-600 hover:text-emerald-500 transition-colors duration-200">
+                    <span>Upload files</span>
+                    <input type="file"
+                           class="sr-only"
+                           multiple
+                           accept="image/*"
+                           (change)="onFileSelect($event)">
+                  </label>
+                  <p class="pl-1">or drag and drop</p>
+                </div>
+                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+              </div>
+            </div>
+            <!-- @if (selectedFiles.length > 0) {
+              <div class="mt-2 flex flex-wrap gap-2">
+                @for (file of selectedFiles; track file.name) {
+                  <div class="inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                    {{file.name}}
+                    <button type="button"
+                            (click)="removeFile($index)"
+                            class="ml-1 text-emerald-600 hover:text-emerald-900">×</button>
+                  </div>
+                }
+              </div>
+            } -->
+          </div>
+
+          <!-- Additional Notes -->
+          <div class="space-y-2">
+            <label class="block text-sm font-semibold">
+              Additional Notes <span class="text-gray-500 text-xs font-normal">(optional)</span>
+            </label>
+            <textarea formControlName="additionalNotes"
+                      rows="3"
+                      class="w-full rounded-lg border-gray-300 focus:border-emerald-500 focus:ring focus:ring-emerald-200 focus:ring-opacity-50 transition-colors duration-200"
+                      placeholder="Any special instructions or notes"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4">
+            <button type="submit"
+                    [disabled]="!collecteForm.valid || collecteForm.pristine"
+                    class="w-full py-4 px-6 rounded-lg font-medium text-white bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl">
+              Submit Collection Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

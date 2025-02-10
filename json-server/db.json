@@ -1,0 +1,367 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "test@test.com",
+      "password": "password123",
+      "role": "USER"
+    },
+    {
+      "id": "df3e",
+      "email": "zurevib@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "b165",
+      "email": "qarida@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "4ff6",
+      "firstName": "Arthur",
+      "lastName": "Pittman",
+      "email": "cora@mailinator.com",
+      "phone": "+1 (627) 138-9829",
+      "address": "Vero eum veniam qui",
+      "city": "Qui Nam ut non non d",
+      "zipCode": "13473",
+      "birthDate": "1974-02-27",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "6c79",
+      "firstName": "Vance",
+      "lastName": "Shannon",
+      "email": "tosyza@mailinator.com",
+      "phone": "+1 (679) 547-2055",
+      "address": "Voluptate corrupti ",
+      "city": "Consequuntur vitae a",
+      "zipCode": "69661",
+      "birthDate": "1972-02-16",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "1949",
+      "firstName": "Jamal",
+      "lastName": "Dodson",
+      "email": "jofabomi@mailinator.com",
+      "phone": "+1 (539) 108-4238",
+      "address": "Error officia id of",
+      "city": "Placeat ex rerum vo",
+      "zipCode": "15234",
+      "birthDate": "1977-05-13",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "fdc9",
+      "firstName": "September",
+      "lastName": "Maynard",
+      "email": "rikucun@mailinator.com",
+      "phone": "+1 (891) 537-6493",
+      "address": "Omnis recusandae Ut",
+      "city": "Eos amet labore cu",
+      "zipCode": "58591",
+      "birthDate": "1979-06-12",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "8915",
+      "firstName": "Nola",
+      "lastName": "Kelley",
+      "email": "qadacabaze@mailinator.com",
+      "phone": "+1 (312) 836-5282",
+      "address": "Saepe officia quia o",
+      "city": "Excepteur nobis temp",
+      "zipCode": "67725",
+      "birthDate": "1984-11-25",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "8fa2",
+      "firstName": "Colt",
+      "lastName": "Palmer",
+      "email": "zezyravid@mailinator.com",
+      "phone": "+1 (438) 386-4402",
+      "address": "Sint sed est quo exc",
+      "city": "Ad mollit accusantiu",
+      "zipCode": "32632",
+      "birthDate": "2019-02-19",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "8686",
+      "firstName": "Sonia",
+      "lastName": "Griffinn2",
+      "email": "bamyvyfowe@mailinator.com",
+      "phone": "+1 (316) 177-9604",
+      "address": "Velit numquam quisqu",
+      "city": "Ullam et illo conseq",
+      "zipCode": "16068",
+      "birthDate": "1991-01-30",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER"
+    },
+    {
+      "id": "a6c1",
+      "firstName": "Macaulay",
+      "lastName": "Knapp",
+      "email": "hufetodynu@mailinator.com",
+      "phone": "+1 (376) 898-8431",
+      "address": "Ad maiores dolorem d",
+      "city": "Adipisicing aut ut s",
+      "zipCode": "74275",
+      "birthDate": "2019-03-15",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "PARTICULIER"
+    },
+    {
+      "id": "0678",
+      "firstName": "abdo",
+      "lastName": "Magni neque iusto qu",
+      "email": "pave@mailinator.com",
+      "phone": "+1 (112) 531-4128",
+      "address": "Harum nihil quis vel",
+      "city": "Molestiae dolore sit",
+      "zipCode": "123456",
+      "birthDate": "2015-06-06",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "role": "USER",
+      "point": 52012
+    }
+  ],
+  "collectes": [
+    {
+      "id": "1",
+      "wasteType": "PLASTIC",
+      "photos": [
+        "https://example.com/photo1.jpg",
+        "https://example.com/photo2.jpg"
+      ],
+      "estimatedWeight": 2500,
+      "collectionAddress": "15 Rue de la République, 75001 Paris",
+      "preferredDate": "2025-02-10",
+      "preferredTimeSlot": "09:30",
+      "additionalNotes": "Lots of plastic bottles and containers"
+    },
+    {
+      "id": "2",
+      "wasteType": "GLASS",
+      "estimatedWeight": 3000,
+      "collectionAddress": "28 Avenue des Champs-Élysées, 75008 Paris",
+      "preferredDate": "2025-02-12",
+      "preferredTimeSlot": "14:00",
+      "additionalNotes": "Mainly wine bottles"
+    },
+    {
+      "id": "3",
+      "wasteType": "PAPER",
+      "photos": [
+        "https://example.com/paper1.jpg"
+      ],
+      "estimatedWeight": 1500,
+      "collectionAddress": "45 Rue du Commerce, 75015 Paris",
+      "preferredDate": "2025-02-15",
+      "preferredTimeSlot": "11:00"
+    },
+    {
+      "id": "4",
+      "wasteType": "METAL",
+      "estimatedWeight": 4000,
+      "collectionAddress": "7 Place de la Bastille, 75004 Paris",
+      "preferredDate": "2025-02-18",
+      "preferredTimeSlot": "16:30",
+      "additionalNotes": "Old appliances and cans"
+    },
+    {
+      "id": "5",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 1800,
+      "collectionAddress": "123 Boulevard Saint-Germain, 75006 Paris",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "10:00"
+    },
+    {
+      "id": "6",
+      "wasteType": "GLASS",
+      "photos": [
+        "https://example.com/glass1.jpg",
+        "https://example.com/glass2.jpg"
+      ],
+      "estimatedWeight": 2800,
+      "collectionAddress": "92 Rue de la Roquette, 75011 Paris",
+      "preferredDate": "2025-02-22",
+      "preferredTimeSlot": "13:30",
+      "additionalNotes": "Fragile items included"
+    },
+    {
+      "id": "7",
+      "wasteType": "PAPER",
+      "estimatedWeight": 2000,
+      "collectionAddress": "55 Rue Oberkampf, 75011 Paris",
+      "preferredDate": "2025-02-25",
+      "preferredTimeSlot": "15:00",
+      "additionalNotes": "Old magazines and newspapers"
+    },
+    {
+      "id": "8",
+      "wasteType": "METAL",
+      "photos": [
+        "https://example.com/metal1.jpg"
+      ],
+      "estimatedWeight": 5000,
+      "collectionAddress": "17 Rue de Belleville, 75019 Paris",
+      "preferredDate": "2025-02-28",
+      "preferredTimeSlot": "12:00"
+    },
+    {
+      "id": "9",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 3500,
+      "collectionAddress": "8 Rue des Martyrs, 75009 Paris",
+      "preferredDate": "2025-03-01",
+      "preferredTimeSlot": "17:00",
+      "additionalNotes": "Construction materials"
+    },
+    {
+      "id": "10",
+      "wasteType": "GLASS",
+      "photos": [
+        "https://example.com/glass3.jpg"
+      ],
+      "estimatedWeight": 2200,
+      "collectionAddress": "33 Avenue Montaigne, 75008 Paris",
+      "preferredDate": "2025-03-03",
+      "preferredTimeSlot": "10:30"
+    },
+    {
+      "id": "9dad",
+      "wasteType": "METAL",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Velit duis sunt corr",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "14:30",
+      "additionalNotes": "",
+      "photos": [
+        {}
+      ],
+      "status": "completed",
+      "userId": 1
+    },
+    {
+      "id": "ce18a",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "pending",
+      "userId": 1
+    },
+    {
+      "id": "ce18b",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "ce18v",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "cancelled",
+      "userId": 1
+    },
+    {
+      "id": "ce18f",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Corporis sed itaque ",
+      "preferredDate": "2025-02-20",
+      "preferredTimeSlot": "11:30",
+      "additionalNotes": "Sunt vero iure dolor",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "2c8f",
+      "wasteType": "GLASS",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Quaerat cillum inven",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "14:30",
+      "additionalNotes": "Adipisci veniam nos",
+      "status": "cancelled",
+      "userId": 1
+    },
+    {
+      "id": "b556",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 1000,
+      "collectionAddress": "Reprehenderit offici",
+      "preferredDate": "2025-02-06",
+      "preferredTimeSlot": "12:30",
+      "additionalNotes": "Est ut et do praesen",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "e737",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 10000,
+      "collectionAddress": "Aliqua Esse ration",
+      "preferredDate": "2025-02-08",
+      "preferredTimeSlot": "11:00",
+      "additionalNotes": "Cum at aut voluptas ",
+      "status": "accepted",
+      "userId": 1
+    },
+    {
+      "id": "b360",
+      "wasteType": "PLASTIC",
+      "estimatedWeight": 1006,
+      "collectionAddress": "Omnis nulla in et fu",
+      "preferredDate": "2025-02-08",
+      "preferredTimeSlot": "18:00",
+      "additionalNotes": "Fugiat mollit ipsam ",
+      "status": "completed",
+      "userId": "0678"
+    },
+    {
+      "id": "a3ae",
+      "wasteType": "METAL",
+      "estimatedWeight": 10000,
+      "collectionAddress": "Et suscipit explicab",
+      "preferredDate": "2025-02-09",
+      "preferredTimeSlot": "15:00",
+      "additionalNotes": "Dolores rerum ipsum",
+      "status": "completed",
+      "userId": "0678"
+    }
+  ]
+}
